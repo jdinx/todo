@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ToDoApp"
+name = "django_todo"
 version = "0.1.0"
 description = ""
 authors = ["jdinx <39510742+jdinx@users.noreply.github.com>"]
@@ -9,7 +9,6 @@ python = "^3.8"
 django = "^3.1.3"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
 
 [build-system]
 requires = ["poetry>=0.12"]
