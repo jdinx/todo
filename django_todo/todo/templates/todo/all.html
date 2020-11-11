@@ -1,0 +1,6 @@
+{% extends 'todo/index.html' %}
+
+{% block tasks %}
+	{% include "todo/current_tasks.html" %}
+	{% include "todo/done_tasks.html" %}
+{% endblock %}

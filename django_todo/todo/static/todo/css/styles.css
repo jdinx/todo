@@ -1,0 +1,129 @@
+body{
+	background-color: #F5F5F5;
+}
+h1 {
+
+}
+div.task-table{
+  padding: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.grid-container{
+	padding: 15px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto auto auto auto auto auto auto;
+	justify-content: stretch;
+	grid-template-areas: "header header header header"
+						"button button button button"
+						"tasks tasks tasks tasks"
+						"tasks tasks tasks tasks"
+						"tasks tasks tasks tasks"
+						"tasks tasks tasks tasks"
+						"tasks tasks tasks tasks"
+						"tasks tasks tasks tasks";
+}
+
+.header{
+	grid-area: header;
+	padding: 4px;
+  	font-style: italic;
+  	font-family: Arial;
+}
+
+button.add-task-button{
+	grid-area: button;
+	margin: 12px;
+	border-radius: 8px;
+	color: WHITE;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 12px 28px;
+	background-color: BLUE;
+	border-color: BLACK;
+
+}
+
+.task-list{
+	grid-area: tasks;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+}
+
+.task-card{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto;
+	grid-template-areas: "name name"
+						 "date done";
+	justify-content: left;
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 8px;
+	box-shadow: 1px 1px gray;
+	background-color: WHITE;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	margin: 3px;
+	min-width: 1fr;
+	
+}
+
+.task-name{
+	grid-area: name;
+}
+
+.task-due-date{
+	grid-area: date;
+	align-self: end;
+	width: 88px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.done-button{
+	align-self: end;
+	justify-self: right;
+	font-size: 24px;
+	color: BLACK;
+	margin-top: 5px;
+	margin-bottom: 3px;
+
+}
+
+.done-button:hover{
+	color: GREEN;
+}
+
+.done-button:active{
+	color: LIGHTGREY;
+}
+
+@media only screen and (max-width : 800px){
+
+    .grid-container{
+	padding: 15px;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto auto auto auto auto auto;
+	justify-content: stretch;
+	grid-template-areas: "header"
+						"button"
+						"tasks";
+	}
+	.task-name{
+		margin-right: 5px;
+	}
+	.task-list{
+	grid-area: tasks;
+	display: inline-grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto auto;
+}
+}

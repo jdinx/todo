@@ -1,0 +1,13 @@
+
+
+		{%for task in task_list%}
+		{%if task.complete == True%}
+			<div class="task-card card m-2 p-2 shadow col-md-2" task-id={{task.id}}>
+				<div class="task-name h6 mb-auto">{{task.name}}</div>
+				<div class="task-due-date m-1">{{task.get_date}}</div>
+				<form action="{% url 'toggle_complete' task_id=task.id %}">
+					<input class="btn btn-secondary shadow m-1" type="submit" value="Re-Open" />
+				</form>
+			</div>
+		{%endif%}		
+		{% endfor %}

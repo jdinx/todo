@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	{% load static %}
+	<script src="{% static 'todo/js/jquery.min.js' %}"></script>
+	<script src="{% static 'todo/js/bootstrap.min.js' %}" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="{% static 'todo/js/bootstrap-datepicker.js' %}" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="{% static 'todo/js/todo.js' %}" type="text/javascript" charset="utf-8" async defer></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'todo/css/bootstrap.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'todo/css/style.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'todo/css/bootstrap-datepicker.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'todo/css/fontawesome-all.css' %}" />
+
+	<title>To Do List</title>
+</head>
+
+<body>
+	
+
+	<div class="container">
+		<form action="{/todo/add_task/}" method="POST">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="taskDescription1">Task Description</label>
+				{{form.name}}
+				<small id="taskHelp" class="form-text text-muted">Tomorrows success starts with today's planning.</small>
+				<label class="mt-2" for="dueDate1">Due Date</label>
+		    	<div class="m-1 input-group date" data-provide="datepicker">
+				    {{form.due_date}}
+				    <div class="input-group-addon">
+				        <span class="far fa-calendar-alt fa-2x p-1"></span>
+				    </div>
+				</div>
+				<label class="mt-2" for="taskDescription1">Reminder Date</label>
+				<div class="m-1 input-group date" data-provide="datepicker">
+				    {{form.reminder_date}}
+				    <div class="input-group-addon">
+				        <span class="far fa-calendar-alt fa-2x p-1"></span>
+				    </div>
+				</div>
+				<button type="submit" value="Submit" class="mt-3 ml-1 btn btn-primary">Submit</button>
+			</div>
+		</form>
+	</div>
+  		
+</body>
