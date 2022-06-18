@@ -71,8 +71,8 @@ version = "6.2.0"
 brotli = ["brotli"]
 
 [metadata]
-content-hash = "9640ae0aeaf06986919cceeed7747cb2a6f16d8bba925944cc499aba5dbc24a6"
-python-versions = "3.8"
+content-hash = "1d6712166047dc5816442de27bae57d107d680fc815f97036d07abcf8a7ee457"
+python-versions = "3.8.5"
 
 [metadata.files]
 asgiref = [
