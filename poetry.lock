@@ -43,8 +43,8 @@ python-versions = ">=3.5"
 version = "0.4.2"
 
 [metadata]
-content-hash = "5ad2ea5fa3b108f0d8b96fbede263d01d93837068771b3ea60f9e799391240a3"
-python-versions = "~3.8"
+content-hash = "ad2ede72b066e3ab42b5407c2a6cc8df2637357fbc8c84b9f178e3d268db6e05"
+python-versions = "3.8.5"
 
 [metadata.files]
 asgiref = [
