@@ -34,7 +34,7 @@ SECRET_KEY = 'dverd_yp&ztyv*e27u8ja-5yoyui3*sz(%nh3(=td6r!x95ka6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jcs-todo-app.herokuapp.com']
+ALLOWED_HOSTS = ['jcs-todo-app.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
